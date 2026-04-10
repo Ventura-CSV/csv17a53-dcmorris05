@@ -13,7 +13,7 @@ def find_non_injective_pair(mapping: dict) -> tuple | None:
         for compared in mappingDupe:
             #iterates len(mappingDupe) - 1 times
             #mapping dupe is always 1 shorter each iteration of mapping
-            
+            if mapping[comparee] == mapping[compared]: return (comparee, compared)
             
     # === END TODO ===
 
