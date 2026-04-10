@@ -5,6 +5,7 @@ def find_non_injective_pair(mapping: dict) -> tuple | None:
     """Return (x1, x2) where f(x1)==f(x2) and x1!=x2, or None if injective."""
     # === TODO ===
     # Your code here
+    #i feel like theres a better way ot do thsi
     mappingDupe = mapping.copy()
     for comparee in mapping:
         #iterates len(mapping) - 1 times
@@ -22,7 +23,9 @@ def find_non_surjective_element(mapping: dict, target: set):
     """Return one target element with no input mapping to it, or None if surjective."""
     # === TODO ===
     # Your code here
-    pass
+    #this seems like itd be doable without makign a var. dunno  how though
+    dif = target - set(mapping.values())
+    if len(dif) != 0: return list(dif)[0]
     # === END TODO ===
 
 def my_floor(x: float) -> int:
